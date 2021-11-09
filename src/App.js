@@ -2,6 +2,17 @@ import React from "react";
 import Form from "./Form";
 import "./App.css";
 
+handleTextChange = (event) => {
+
+}
+
+
+handleFormSubmit = (event) => {
+  event.preventDefault();
+
+  alert("Submitted!")
+}
+
 class App extends React.Component {
   render() {
     return (
