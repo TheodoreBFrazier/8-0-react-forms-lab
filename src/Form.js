@@ -1,6 +1,26 @@
 import React from "react";
 import "./Form.css";
 
+ //Handle the user's input 
+ handleUsersInput = (event) => {
+  this.setState({
+    usersInput: event.target.value
+  })
+}
+
+//Handle the operation 
+handleOperationChange = (event) => {
+  this.setState({
+    selectedOperation: event.target.value
+  })
+}
+
+//Submit
+userSubmission = (event) => {
+  event.preventDefault();
+    this.props.getResult(this.state.usersInput, this.state.selectedOperation)
+}
+
 class Form extends React.Component {
   render() {
     return (
